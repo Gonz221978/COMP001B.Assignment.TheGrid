@@ -1,0 +1,2 @@
+Author: Ethen Gonzalez
+Purpose: Demonstrate the ability to create basic layouts using the CSS grid. Using a set of starter files and, by only editing the CSS stylesheet, I will format the page so that it creates a layout similar to what is provided.
