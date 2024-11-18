@@ -20,17 +20,19 @@ a:focus, a:hover {
 body {
 	font-family: 'Noto Serif', serif;
 	font-size: 18px;
+	margin: 0; /* Removes default margin. */
+    padding: 0; /* Removes default padding. */
 }
 
 h1, h2 {
 	font-family: 'Roboto Condensed', sans-serif;
-	letter-spacing: .05em;
-	margin: 1.5rem auto;
-	text-align: center;	
+	letter-spacing: .05em; /* Slight spacing between letters for readability. */
+    margin: 1.5rem auto; /* Adds vertical margin for spacing. */
+    text-align: center; /* Centers the headings. */
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 3rem; /* Large font size for main heading. */
 }
 
 h2 {
@@ -38,34 +40,65 @@ h2 {
 }
 
 header {
-	text-align: center;
+	text-align: center; /* Centers all header content. */
 }
 
 main {
-
+	grid-area: main; /* Assigns the main content area in the grid. */
+    padding: 1rem; /* Adds internal spacing for content. */
 }
 
 p {
-	line-height: 140%;
-	margin-bottom: 1em;
+	line-height: 1.4; /* Adjusts line height for readability. */
+    margin-bottom: 1em; /* Adds spacing between paragraphs. */
 }
 
 #intro {
 	font-size: 22px;
+	margin-bottom: 2rem;
 }
 
 #automotive, #maritime, #medical, #physics, #myths {
-
+	margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 #footer-container {
-	
+	grid-area: footer; /* Places footer in the grid layout. */
+    padding: 1rem 0; /* Vertical padding for spacing. */
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 #header-container {
-
+	grid-area: header; /* Assigns the header area in the grid. */
+    padding: 1rem 0;
+	text-align: center;
 }
 
 #main-container {
+	display: grid; /* Enables CSS Grid for layout. */
+    grid-template-areas: /* Defines grid layout structure. */
+        "nav main aside"
+        "nav main aside";
+	grid-template-columns: 1fr 2fr 1fr; /* Assigns width ratios for nav, main, and aside. */
+	gap: 1rem; /* Adds spacing between grid items. */
+	width: 100%; /* Ensures the container spans the full width. */
+    padding: 1rem;
+    box-sizing: border-box; /* Includes padding in the element's total width/height. */
+}
 
+nav {
+	grid-area: nav; /* Assigns navigation to the grid area. */
+    padding: 1rem;
+}
+
+aside {
+	grid-area: aside; /* Assigns sidebar to the grid area. */
+    padding: 1rem;
+}
+
+footer {
+    margin: 0;
+    padding: 0.5rem;
 }
